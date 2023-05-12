@@ -8,7 +8,16 @@ import { fileRouter } from "./route/file.js";
 // require("dotenv").config;
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "*" }));
+
+const corsOptions = {
+  // origin:'https://abc.onrender.com',
+  AccessControlAllowOrigin: "*",
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use("/test", testRouter);
 app.use("/file", fileRouter);
