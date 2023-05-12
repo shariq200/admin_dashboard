@@ -13,6 +13,7 @@ app.use(cors());
 app.use("/test", testRouter);
 app.use("/file", fileRouter);
 const env_variables = env.config().parsed;
+console.log("abc");
 
 mongoose.connect(env_variables.MONGO_URL);
 
