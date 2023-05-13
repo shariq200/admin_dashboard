@@ -24,6 +24,8 @@ app.use("/file", fileRouter);
 const env_variables = env.config().parsed;
 console.log("abc");
 
-mongoose.connect(env_variables.MONGO_URL);
+mongoose.connect(
+  "mongodb+srv://frontbacktesting:frontbacktesting@frontbacktesting.ucegmfe.mongodb.net/?retryWrites=true&w=majority"
+);
 
-app.listen(env_variables.PORT, () => console.log("server started at 3001"));
+app.listen(3001, () => console.log("server started at 3001"));
