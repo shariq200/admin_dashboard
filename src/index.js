@@ -23,6 +23,7 @@ app.use("/test", testRouter);
 app.use("/file", fileRouter);
 const env_variables = env.config().parsed;
 console.log("abc");
+console.log("updated code");
 
 mongoose.connect(
   "mongodb+srv://frontbacktesting:frontbacktesting@frontbacktesting.ucegmfe.mongodb.net/?retryWrites=true&w=majority"
